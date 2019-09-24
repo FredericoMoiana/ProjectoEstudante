@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CalendarioAcademico</string>
+    <string name="txtNumero">txtNumero</string>
+    <string name="textView6">Password</string>
+    <string name="textView5">User</string>
+    <string name="btnLogin">Login</string>
+</resources>
