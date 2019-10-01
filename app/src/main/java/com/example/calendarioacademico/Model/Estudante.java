@@ -4,9 +4,9 @@ public class Estudante {
     private int id;
     private String nome;
     private String password;
-    private int curso;
+    private String curso;
 
-    public Estudante(int id, String nome, String password, int curso) {
+    public Estudante(int id, String nome, String password, String curso) {
         this.id = id;
         this.nome = nome;
         this.password = password;
@@ -16,11 +16,11 @@ public class Estudante {
     public Estudante() {
     }
 
-    public int getCurso() {
+    public String getCurso() {
         return curso;
     }
 
-    public void setCurso(int curso) {
+    public void setCurso(String curso) {
         this.curso = curso;
     }
 

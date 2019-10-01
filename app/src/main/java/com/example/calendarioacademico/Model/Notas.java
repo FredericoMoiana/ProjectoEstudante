@@ -2,23 +2,27 @@ package com.example.calendarioacademico.Model;
 
 public class Notas {
 
-    private int disciplina;
+    private String disciplina;
     private double teste1;
     private double teste2;
     private double trabalho;
 
-    public Notas(int disciplina, double teste1, double teste2, double trabalho) {
+    public Notas(String  disciplina, double teste1, double teste2, double trabalho) {
         this.disciplina = disciplina;
         this.teste1 = teste1;
         this.teste2 = teste2;
         this.trabalho = trabalho;
     }
 
-    public int getDisciplina() {
+    public Notas() {
+
+    }
+
+    public String  getDisciplina() {
         return disciplina;
     }
 
-    public void setDisciplina(int disciplina) {
+    public void setDisciplina(String disciplina) {
         this.disciplina = disciplina;
     }
 

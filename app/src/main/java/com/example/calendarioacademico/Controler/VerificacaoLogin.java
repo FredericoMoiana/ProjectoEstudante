@@ -1,14 +1,15 @@
-package com.example.calendarioacademico.Model;
+package com.example.calendarioacademico.Controler;
 
 import android.content.Context;
 import android.widget.Toast;
 
 import com.example.calendarioacademico.Controler.ConectionDatabase;
+import com.example.calendarioacademico.Model.Estudante;
 
 import java.sql.Connection;
 import java.util.List;
 
-public class Ponte {
+public class VerificacaoLogin {
 
     public static Estudante checkCredenciais(int user, String pass, Context context){
         ConectionDatabase.criarConexao(context);

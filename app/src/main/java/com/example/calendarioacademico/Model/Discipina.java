@@ -3,12 +3,32 @@ package com.example.calendarioacademico.Model;
 public class Discipina {
     private int id;
     private String nome;
-    private int curso;
+    private String nomeProfessor;
+    private String contactoProfessor;
+    private String curso;
 
-    public Discipina(int id, String nome, int curso) {
+    public Discipina(int id, String nome, String nomeProfessor, String contactoProfessor, String curso) {
         this.id = id;
         this.nome = nome;
+        this.nomeProfessor = nomeProfessor;
+        this.contactoProfessor = contactoProfessor;
         this.curso = curso;
+    }
+
+    public String getNomeProfessor() {
+        return nomeProfessor;
+    }
+
+    public void setNomeProfessor(String nomeProfessor) {
+        this.nomeProfessor = nomeProfessor;
+    }
+
+    public String getContactoProfessor() {
+        return contactoProfessor;
+    }
+
+    public void setContactoProfessor(String contactoProfessor) {
+        this.contactoProfessor = contactoProfessor;
     }
 
     public Discipina() {
@@ -30,11 +50,11 @@ public class Discipina {
         this.nome = nome;
     }
 
-    public int getCurso() {
+    public String getCurso() {
         return curso;
     }
 
-    public void setCurso(int curso) {
+    public void setCurso(String curso) {
         this.curso = curso;
     }
 }

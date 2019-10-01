@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
-import com.example.calendarioacademico.Model.Ponte;
+import com.example.calendarioacademico.Adapters.DatabaseAdapter;
 
 public class ConectionDatabase {
 
@@ -24,5 +24,8 @@ public class ConectionDatabase {
             dialog.setTitle("Error");
             dialog.show();
         }
+    }
+    public static void toast(String message,Context context){
+        Toast.makeText(context,message,Toast.LENGTH_LONG).show();
     }
 }

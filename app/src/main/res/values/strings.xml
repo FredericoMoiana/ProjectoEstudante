@@ -1,7 +1,26 @@
 <resources>
-    <string name="app_name">CalendarioAcademico</string>
-    <string name="txtNumero">txtNumero</string>
-    <string name="textView6">Password</string>
-    <string name="textView5">User</string>
+    <string name="app_name">Calendário Acadêmico</string>
+
+    <!--    Login-->
+    <string name="txtNumero">Número de Estudante</string>
+    <string name="txtPassword">Password</string>
     <string name="btnLogin">Login</string>
+    <string name="btnNovaConta">Novo Estudante</string>
+    <string name="imgUser">Utilizador</string>
+    <string name="lblNovoEstudante">Nova Conta</string>
+    <string name="txtIdEstudante">Introduza o ID de Estudante</string>
+
+    <!--    Estudante-->
+    <string name="txtNomeEstudante">Introduza o Nome do Estudante</string>
+    <string name="txtCursoEstudante">Introduza o Curso</string>
+    <string name="txtPasswordEstudante">Introduza a Palavra Passe</string>
+    <string name="btnAdicionarEstudante">Adicionar</string>
+
+    <!--    CriarProfessor-->
+    <string name="txtProfessorId">Introduza o ID do Professor</string>
+    <string name="txtProfessorNome">Nome</string>
+    <string name="txtProfessorContacto">+258 </string>
+    <string name="btnAdicionarProfessor">Adicionar</string>
+
+
 </resources>

@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecycleViewDisciplinas">
-
+    tools:context=".Conteudo">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listaDisciplinas"
+
+        android:id="@+id/recyclerViewDisciplinas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/support_simple_spinner_dropdown_item" />
 </RelativeLayout>

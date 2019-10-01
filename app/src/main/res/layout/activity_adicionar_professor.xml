@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".CriarProfessor">
+
+    <EditText
+        android:id="@+id/txtProfessorId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/txtProfessorId"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtProfessorNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/txtProfessorNome"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtProfessorContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/txtProfessorContacto"
+        android:inputType="phone"
+        android:text="+258" />
+
+    <Button
+        android:id="@+id/btnAdicionarProfessor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAdicionarProfessor" />
+</LinearLayout>

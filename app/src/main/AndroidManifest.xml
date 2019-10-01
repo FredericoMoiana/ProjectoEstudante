@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Disciplinas"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Conteudo"></activity>
+        <activity android:name=".CriarProfessor" />
+        <activity android:name=".CriarEstudante" />
+        <activity android:name=".Login" />
+        <activity android:name=".RecycleViewDisciplinas">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

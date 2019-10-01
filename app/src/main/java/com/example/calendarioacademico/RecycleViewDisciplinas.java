@@ -7,13 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.calendarioacademico.Controler.ConectionDatabase;
-import com.example.calendarioacademico.Controler.adapterDisciplinas;
+import com.example.calendarioacademico.Adapters.adapterRecycleViewDisciplinas;
 import com.example.calendarioacademico.Model.Discipina;
-import com.example.calendarioacademico.Model.Ponte;
 
 import java.util.List;
 
-public class Disciplinas extends AppCompatActivity {
+public class RecycleViewDisciplinas extends AppCompatActivity {
 
     RecyclerView recyclerView;
     @Override
@@ -21,9 +20,11 @@ public class Disciplinas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disciplinas);
         ConectionDatabase.criarConexao(this);
+
         recyclerView= findViewById(R.id.listaDisciplinas);
+
         List<Discipina> discipinaList = ConectionDatabase.comands.getDisciplinas();
-        adapterDisciplinas disciplinasAdapter = new adapterDisciplinas(discipinaList);
+        adapterRecycleViewDisciplinas disciplinasAdapter = new adapterRecycleViewDisciplinas(discipinaList);
         recyclerView.setAdapter(disciplinasAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

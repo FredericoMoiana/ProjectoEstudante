@@ -1,12 +1,14 @@
-package com.example.calendarioacademico.Controler;
+package com.example.calendarioacademico.Adapters;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+//By Frederico dos Santos Moiana
 public class DatabaseAdapter extends SQLiteOpenHelper {
 
     public DatabaseAdapter(Context context) {
+
         super(context, "dbEstudante", null, 1);
     }
 
@@ -21,7 +23,7 @@ public class DatabaseAdapter extends SQLiteOpenHelper {
         StringBuilder sql = new StringBuilder();
         sql.append("CREATE TABLE IF NOT EXISTS NOTAS(");
         sql.append("ID INTEGER  PRIMARY KEY NOT NULL,");
-        sql.append("DISCIPLINA INTEGER NOT NULL,");
+        sql.append("DISCIPLINA VARCHAR(25) NOT NULL,");
         sql.append("TESTE1 DOUBLE NOT NULL,");
         sql.append("TESTE2 DOUBLE NOT NULL,");
         sql.append("TRABALHO DOUBLE NOT NULL)");
@@ -32,6 +34,8 @@ public class DatabaseAdapter extends SQLiteOpenHelper {
         sql.append("CREATE TABLE IF NOT EXISTS DISCIPLINA(");
         sql.append("ID INTEGER  PRIMARY KEY NOT NULL,");
         sql.append("NOME VARCHAR(25) NOT NULL,");
+        sql.append("CONTACTOPROFESSOR VARCHAR(25) NOT NULL,");
+        sql.append("PROFESSOR VARCHAR(25) NOT NULL,");
         sql.append("CURSO INTEGER NOT NULL)");
         return sql.toString();
     }
@@ -41,7 +45,15 @@ public class DatabaseAdapter extends SQLiteOpenHelper {
         sql.append("ID INTEGER  PRIMARY KEY NOT NULL,");
         sql.append("NOME VARCHAR(30) NOT NULL,");
         sql.append("PASSWORD VARCHAR(30) NOT NULL,");
-        sql.append("CURSO INTERGER NOT NULL)");
+        sql.append("CURSO VARCHAR(25) NOT NULL)");
+        return sql.toString();
+    }
+    private String CreateProfessorTable(){
+        StringBuilder sql = new StringBuilder();
+        sql.append("CREATE TABLE IF NOT EXISTS PROFESSOR(");
+        sql.append("ID INTEGER  PRIMARY KEY NOT NULL,");
+        sql.append("NOME VARCHAR(30) NOT NULL,");
+        sql.append("CONTACTO VARCHAR(30) NOT NULL");
         return sql.toString();
     }
 
@@ -51,6 +63,7 @@ public class DatabaseAdapter extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(CreateNotasTable());
         sqLiteDatabase.execSQL(CreateEstudanteTable());
         sqLiteDatabase.execSQL(CreateDisciplinaTable());
+        sqLiteDatabase.execSQL(CreateProfessorTable());
     }
 
     @Override

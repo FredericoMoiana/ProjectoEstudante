@@ -1,4 +1,4 @@
-package com.example.calendarioacademico.Controler;
+package com.example.calendarioacademico.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,17 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.calendarioacademico.Disciplinas;
 import com.example.calendarioacademico.Model.Discipina;
 import com.example.calendarioacademico.R;
 
 import java.util.List;
 
-public class adapterDisciplinas extends RecyclerView.Adapter<adapterDisciplinas.Adapter> {
+public class adapterRecycleViewDisciplinas extends RecyclerView.Adapter<adapterRecycleViewDisciplinas.Adapter> {
 
     List<Discipina> disciplinasList;
 
-    public adapterDisciplinas(List<Discipina> disciplinasList) {
+    public adapterRecycleViewDisciplinas(List<Discipina> disciplinasList) {
         this.disciplinasList = disciplinasList;
     }
 
